@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8f3da395e14484b4a997c68858fbb9cd
+guid: 93ee4ab3103250341aa4869530464a35
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,13 +128,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FutureTiles_0
+      name: Father_eat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942d0aa90ef057240b5f17de85b6e1e9
+      internalID: -959500107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Father_eat_1
       rect:
         serializedVersion: 2
         x: 0
         y: 180
-        width: 80
-        height: 80
+        width: 90
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,62 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84d4c10f9a50ca40b3b144e933215e3
-      internalID: 429674969
+      spriteID: 41408e6c4e9263c448e264ea28c4efe0
+      internalID: -818912234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FutureTiles_1
+      name: Father_eat_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 180
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d71541abd429a1a40a30427532e9ec6e
-      internalID: -1773334537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FutureTiles_2
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 180
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15e478d3b1230734284fb095ffb5d1f1
-      internalID: 1236723235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FutureTiles_3
-      rect:
-        serializedVersion: 2
-        x: 90
+        x: 0
         y: 90
-        width: 80
-        height: 80
+        width: 90
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +184,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d25b65a3cfa174b4f8a004beb8f09fce
-      internalID: -354380499
+      spriteID: 3a6bf23247b215044af2aeeb1e61dcb6
+      internalID: 2027527926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Father_eat_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac85152ead78124383811bb44f8f9c2
+      internalID: 870706105
       vertices: []
       indices: 
       edges: []
@@ -222,10 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FutureTiles_1: -1773334537
-      FutureTiles_0: 429674969
-      FutureTiles_2: 1236723235
-      FutureTiles_3: -354380499
+      Father_eat_1: -818912234
+      Father_eat_3: 870706105
+      Father_eat_2: 2027527926
+      Father_eat_0: -959500107
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
