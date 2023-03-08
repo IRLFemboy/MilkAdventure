@@ -9,12 +9,6 @@ public class TimeTravel : MonoBehaviour
     public GameObject past;
     public GameObject current;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
