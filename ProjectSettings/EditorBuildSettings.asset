@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Corbin's Stuff/Scenes/TestSceneFuture.unity
+    guid: 01e85238ddfbae94ca4426f7b1f5e9fc
+  - enabled: 1
+    path: Assets/Corbin's Stuff/Scenes/TestScenePast.unity
+    guid: 2f56168fc3177de46b778d20710f6ba5
+  - enabled: 1
+    path: Assets/Corbin's Stuff/Scenes/TestSceneCurrent.unity
+    guid: 60262b8e0a7e8aa4babbeef3ef95173c
   m_configObjects: {}
