@@ -30,7 +30,7 @@ public class TimeTravel : MonoBehaviour
             current.SetActive(false);
             StartCoroutine(SwitchToCurrentTime());
         }
-        if(Input.GetKeyDown(KeyCode.F) && !past.activeSelf && !future.activeSelf)
+        if(Input.GetKeyDown(KeyCode.C) && !past.activeSelf && !future.activeSelf)
         {
             future.SetActive(true);
             current.SetActive(false);
