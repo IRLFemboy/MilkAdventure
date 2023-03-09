@@ -58,19 +58,21 @@ public class PlayerController : MonoBehaviour
         // Drop Item
         if (Input.GetKeyDown(KeyCode.R) && selectedItem != null)
         {
-            Instantiate(selectedItem.entity, gameObject.transform);
+            GameObject dItem = Instantiate(selectedItem.entity, gameObject.transform);
             ItemManager.Instance.RemoveItem(selectedItem);
+            selectedItem = null;
+            ItemManager.Instance.heldItem = null;
+            dItem.transform.position = transform.position;
+            dItem.transform.parent = null;  
         }
         // Switch selected item
-        if (Input.GetKeyDown(KeyCode.Alpha1) && ItemManager.Instance.Items.Count >= 1)
-        {
-            selectedItem = ItemManager.Instance.Items[0];
-        }
         for (int i = 0; i < 10; ++i)
         {
             if (Input.GetKeyDown("" + i))
             {
                 selectedItem = ItemManager.Instance.Items[i - 1];
+                ItemManager.Instance.heldItem = selectedItem;
+                ItemManager.Instance.OpenInventory();
             }
         }
     }
