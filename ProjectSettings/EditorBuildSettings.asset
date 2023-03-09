@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Corbin's Stuff/Scenes/ExampleLevel.unity
+    guid: 3742824be9a476a4f82b63ef2f14d282
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Corbin's Stuff/Scenes/TestSceneCurrent.unity
+    guid: 60262b8e0a7e8aa4babbeef3ef95173c
   m_configObjects: {}
