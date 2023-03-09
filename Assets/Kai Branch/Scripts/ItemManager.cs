@@ -26,11 +26,13 @@ public class ItemManager : MonoBehaviour
     public void AddItem(Item item)
     {
         Items.Add(item);
+        OpenInventory();
     }
 
     public void RemoveItem(Item item)
     {
         Items.Remove(item);
+        OpenInventory();
     }
 
     public void OpenInventory()
@@ -44,11 +46,16 @@ public class ItemManager : MonoBehaviour
         {
             GameObject obj = Instantiate(inventoryItem, ItemContent);
             var itemName = obj.transform.Find("Item Name").GetComponent<TextMeshProUGUI>();
+            var itemBorder = obj.transform.Find("Item Border").GetComponent<Image>();
             var itemIcon = obj.transform.Find("Item Icon").GetComponent<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
-            obj.GetComponent<Image>().sprite = slot;
+            itemBorder.sprite = slot;
+            if (item == heldItem)
+            {
+                itemBorder.sprite = selectSlot;
+            }
         }
     }
 }
