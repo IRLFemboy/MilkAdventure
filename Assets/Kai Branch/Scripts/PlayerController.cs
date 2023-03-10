@@ -46,12 +46,12 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
         // Pick Up Item
-        if (Input.GetKeyDown(KeyCode.F) && pickup != null && ItemManager.Instance.Items.Count < ItemManager.Instance.itemLimit)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && pickup != null && ItemManager.Instance.Items.Count < ItemManager.Instance.itemLimit)
         {
             ItemManager.Instance.AddItem(pickup.GetComponent<ItemPickup>().item);
             Destroy(pickup);
         }
-        else if (Input.GetKeyDown(KeyCode.F) && pickup != null && ItemManager.Instance.Items.Count >= ItemManager.Instance.itemLimit)
+        else if (Input.GetKeyDown(KeyCode.LeftShift) && pickup != null && ItemManager.Instance.Items.Count >= ItemManager.Instance.itemLimit)
         {
             // EXTREMELY LOUD INCORRECT BUZZER SOUND
         }
@@ -68,12 +68,17 @@ public class PlayerController : MonoBehaviour
         // Switch selected item
         for (int i = 0; i < 10; ++i)
         {
-            if (Input.GetKeyDown("" + i))
+            if (Input.GetKeyDown("" + i) && ItemManager.Instance.Items[i - 1] != null)
             {
                 selectedItem = ItemManager.Instance.Items[i - 1];
                 ItemManager.Instance.heldItem = selectedItem;
                 ItemManager.Instance.OpenInventory();
             }
+        }
+        // Use selected item
+        if (Input.GetKeyDown(KeyCode.F) && selectedItem != null)
+        {
+            ItemDex.Instance.UseItem(selectedItem.id);
         }
     }
     public void Bounce(Vector2 direction, float power)

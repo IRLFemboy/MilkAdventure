@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbdf6a6f0c191f4e8ee29f732e6d386, type: 3}
+  m_Name: MoldBred
+  m_EditorClassIdentifier: 
+  id: 30323331
+  itemName: Moldy Bred
+  icon: {fileID: 21300000, guid: c514f2494b4dd0940bdd1d8a01105d15, type: 3}
+  entity: {fileID: 6194467259450873919, guid: ac23836c36befb448b3a81f0aaea0d4a, type: 3}
