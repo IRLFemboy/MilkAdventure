@@ -45,9 +45,14 @@ public class NPCTalkingToPlayer : MonoBehaviour
     //First interaction
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //get the id of the held item
-        PlayerItemID = Player.gameObject.GetComponent<PlayerController>().selectedItem.id;
-        Debug.Log("oops");
+        //check if player is holding an item
+        if (Player.gameObject.GetComponent<PlayerController>().selectedItem != null)
+        {
+            //get the id of the held item
+            PlayerItemID = Player.gameObject.GetComponent<PlayerController>().selectedItem.id;
+        }
+
+
         //check if collision was player
         if (collision.gameObject.CompareTag("Player"))
         {
