@@ -72,6 +72,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
                 //leave text bubble
                 StartCoroutine(speakDelay());
 
+                Destroy(gameObject, 3f);
             }
             else
             {
