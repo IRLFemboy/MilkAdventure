@@ -14,12 +14,14 @@ public class NPCTalkingToPlayer : MonoBehaviour
     public string WhenTheyGetItems;
     private bool hasTalkedBefore;
 
+
     //text bubble
     public TextMeshProUGUI textBubble;
     public GameObject enableTextBubble;
 
     //NPC
     public GameObject NPC;
+
 
     //player
     private int PlayerItemID;
@@ -31,8 +33,10 @@ public class NPCTalkingToPlayer : MonoBehaviour
     {
         enableTextBubble.SetActive(false);
 
+
         //find the player
         Player = GameObject.Find("Father");
+
     }
 
     // Update is called once per frame
@@ -45,6 +49,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
     //First interaction
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         //check if player is holding an item
         if (Player.gameObject.GetComponent<PlayerController>().selectedItem != null)
         {
@@ -94,6 +99,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
             }
         }
        
+
 
 
     }
