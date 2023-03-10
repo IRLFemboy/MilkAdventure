@@ -10,6 +10,10 @@ public class ButtonController : MonoBehaviour
 
     [Header("Item to spawn or door to open")]
     public GameObject spawnItem;
+    public GameObject door;
+
+    [Header("Door specific stuff")]
+    public Animator doorAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -30,5 +34,17 @@ public class ButtonController : MonoBehaviour
             
             spawnItem.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.F) && collision.gameObject.CompareTag("Player") && DoorOpener)
+        {
+            OpenDoor();
+        }
+    }
+
+    void OpenDoor()
+    {
+        BoxCollider2D doorCollider = door.GetComponent<BoxCollider2D>();
+        doorCollider.enabled = false;
+        doorAnim.SetBool("openDoor", true);
     }
 }
