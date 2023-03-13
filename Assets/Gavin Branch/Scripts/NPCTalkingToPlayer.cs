@@ -95,9 +95,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
         //NPC says line after getting items
         textBubble.text = WhenTheyGetItems;
 
-        //leave text bubble
-        StartCoroutine(speakDelay());
-
+        //wait then destroy NPC
         Destroy(gameObject, 4f);
     }
 
