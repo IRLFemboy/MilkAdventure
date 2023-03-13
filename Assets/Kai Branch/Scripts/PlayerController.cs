@@ -103,4 +103,26 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    // Move camera if you're not on screen
+    public void OnBecameInvisible()
+    {
+        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+        if (transform.position.y > camera.transform.position.y && Mathf.Abs(transform.position.x - camera.transform.position.x) !< 6.4f)
+        {
+            camera.transform.Translate(Vector2.up * 7f);
+        }
+        else if (transform.position.y < camera.transform.position.y && Mathf.Abs(transform.position.x - camera.transform.position.x) !< 6.4f)
+        {
+            camera.transform.Translate(Vector2.down * 7f);
+        }
+        else if (transform.position.x > camera.transform.position.x && Mathf.Abs(transform.position.y - camera.transform.position.y) !< 7f)
+        {
+            camera.transform.Translate(Vector2.right * 12f);
+        }
+        else if (transform.position.x < camera.transform.position.x && Mathf.Abs(transform.position.y - camera.transform.position.y) !< 7f)
+        {
+            camera.transform.Translate(Vector2.left * 12f);
+        }
+    }
 }
