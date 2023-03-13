@@ -37,6 +37,7 @@ public class ItemManager : MonoBehaviour
 
     public void OpenInventory()
     {
+        bool itemSelected = false;
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
@@ -52,10 +53,12 @@ public class ItemManager : MonoBehaviour
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
             itemBorder.sprite = slot;
-            if (item == heldItem)
+            if (item == heldItem && !itemSelected)
             {
                 itemBorder.sprite = selectSlot;
+                itemSelected = true;
             }
         }
+        itemSelected = false;
     }
 }

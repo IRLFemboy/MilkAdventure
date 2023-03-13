@@ -23,12 +23,25 @@ public class TimeTravel : MonoBehaviour
             past.SetActive(true);
             current.SetActive(false);
             StartCoroutine(SwitchToCurrentTime());
+            if(Input.GetKeyDown(KeyCode.G) && past.activeSelf)
+            {
+                past.SetActive(false);
+                current.SetActive(true);
+                StopCoroutine(SwitchToCurrentTime());
+            }    
         }
         if(Input.GetKeyDown(KeyCode.C) && !past.activeSelf && !future.activeSelf)
         {
             future.SetActive(true);
             current.SetActive(false);
             StartCoroutine(SwitchToCurrentTime());
+            if (Input.GetKeyDown(KeyCode.G) && future.activeSelf)
+            {
+
+                future.SetActive(false);
+                current.SetActive(true);
+                StopCoroutine(SwitchToCurrentTime());
+            }
         }
 
 

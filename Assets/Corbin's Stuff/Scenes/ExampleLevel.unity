@@ -647,6 +647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27953c79f297ca94793b7c535539d386, type: 3}
+
 --- !u!1 &1057179118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,9 +3079,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6009769203288536457, guid: 413ffd87fa0fdd249a1fbb59f080862e, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 986009765}
+    - target: {fileID: 6009769203288536457, guid: 413ffd87fa0fdd249a1fbb59f080862e, type: 3}
+      propertyPath: doorAnim
+      value: 
+      objectReference: {fileID: 986009766}
+    - target: {fileID: 6009769203288536457, guid: 413ffd87fa0fdd249a1fbb59f080862e, type: 3}
       propertyPath: spawnItem
       value: 
       objectReference: {fileID: 53343107}
+    - target: {fileID: 6009769203288536457, guid: 413ffd87fa0fdd249a1fbb59f080862e, type: 3}
+      propertyPath: DoorOpener
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6009769203288536457, guid: 413ffd87fa0fdd249a1fbb59f080862e, type: 3}
       propertyPath: ItemSpawner
       value: 1
