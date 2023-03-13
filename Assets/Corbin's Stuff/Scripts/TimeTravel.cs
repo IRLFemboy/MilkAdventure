@@ -18,47 +18,25 @@ public class TimeTravel : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.P) && !past.activeSelf && !future.activeSelf)
+        if (Input.GetKeyDown(KeyCode.P) && !past.activeSelf)
         {
             past.SetActive(true);
+            future.SetActive(false);
             current.SetActive(false);
-            StartCoroutine(SwitchToCurrentTime());
-            if(Input.GetKeyDown(KeyCode.G) && past.activeSelf)
-            {
-                past.SetActive(false);
-                current.SetActive(true);
-                StopCoroutine(SwitchToCurrentTime());
-            }    
+
         }
-        if(Input.GetKeyDown(KeyCode.C) && !past.activeSelf && !future.activeSelf)
+
+        if(Input.GetKeyDown(KeyCode.C) && !future.activeSelf)
         {
             future.SetActive(true);
+            past.SetActive(false);
             current.SetActive(false);
-            StartCoroutine(SwitchToCurrentTime());
-            if (Input.GetKeyDown(KeyCode.G) && future.activeSelf)
-            {
-
-                future.SetActive(false);
-                current.SetActive(true);
-                StopCoroutine(SwitchToCurrentTime());
-            }
         }
-
-
-    }
-
-    IEnumerator SwitchToCurrentTime()
-    {
-        yield return new WaitForSeconds(5);
-        if(past.activeSelf)
+        if (Input.GetKeyDown(KeyCode.G) && (future.activeSelf || past.activeSelf))
         {
+            future.SetActive(false);
             past.SetActive(false);
             current.SetActive(true);
-        }
-        if(future.activeSelf)
-        {
-            current.SetActive(true);
-            future.SetActive(false);
         }
     }
 }
