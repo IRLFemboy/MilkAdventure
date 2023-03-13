@@ -27,6 +27,9 @@ public class NPCTalkingToPlayer : MonoBehaviour
     private int PlayerItemID;
     private GameObject Player;
 
+    //item
+    public GameObject itemToSpawn;
+
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +97,12 @@ public class NPCTalkingToPlayer : MonoBehaviour
 
         //NPC says line after getting items
         textBubble.text = WhenTheyGetItems;
+
+        //spawn item
+        if(itemToSpawn != null)
+        {
+            itemToSpawn.SetActive(true);
+        }
 
         //wait then destroy NPC
         Destroy(gameObject, 3f);
