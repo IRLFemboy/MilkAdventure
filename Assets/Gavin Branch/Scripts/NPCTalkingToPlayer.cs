@@ -96,7 +96,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
         textBubble.text = WhenTheyGetItems;
 
         //wait then destroy NPC
-        Destroy(gameObject, 4f);
+        Destroy(gameObject, 3f);
     }
 
     public void AskForItem()
