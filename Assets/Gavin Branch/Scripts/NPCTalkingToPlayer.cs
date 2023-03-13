@@ -9,7 +9,7 @@ public class NPCTalkingToPlayer : MonoBehaviour
     public int timeSpeaking;
 
     //NPC lines
-    public int questItems;
+    public int questItemID;
     public string AskForItems;
     public string WhenTheyGetItems;
     private bool hasTalkedBefore;
@@ -63,39 +63,13 @@ public class NPCTalkingToPlayer : MonoBehaviour
         {
             
             //check if player has the item the NPC they want and they have talked to NPC before
-            if (PlayerItemID == questItems && hasTalkedBefore)
+            if (PlayerItemID == questItemID && hasTalkedBefore)
             {
-                ItemManager.Instance.RemoveItem(Player.gameObject.GetComponent<PlayerController>().selectedItem);
-
-                //enable textBubble
-                enableTextBubble.SetActive(true);
-
-
-                //NPC says line after getting items
-                textBubble.text = WhenTheyGetItems;
-
-                //leave text bubble
-                StartCoroutine(speakDelay());
-
-                Destroy(gameObject, 3f);
+                OnGetItem();
             }
             else
             {
-                //player has talked to NPC
-                hasTalkedBefore = true;
-
-                //Move the text bubble to the NPC
-                enableTextBubble.transform.position = Camera.main.WorldToScreenPoint(NPC.transform.position);
-
-                //enable textBubble
-                enableTextBubble.SetActive(true);
-
-
-                //NPC says what they want
-                textBubble.text = AskForItems;
-
-                //leave text bubble
-                StartCoroutine(speakDelay());
+                AskForItem();
             }
         }
        
@@ -109,4 +83,39 @@ public class NPCTalkingToPlayer : MonoBehaviour
         yield return new WaitForSeconds(timeSpeaking);
         enableTextBubble.SetActive(false);
     }
+
+    public void OnGetItem()
+    {
+        ItemManager.Instance.RemoveItem(Player.gameObject.GetComponent<PlayerController>().selectedItem);
+
+        //enable textBubble
+        enableTextBubble.SetActive(true);
+
+
+        //NPC says line after getting items
+        textBubble.text = WhenTheyGetItems;
+
+        //wait then destroy NPC
+        Destroy(gameObject, 4f);
+    }
+
+    public void AskForItem()
+    {
+        //player has talked to NPC
+        hasTalkedBefore = true;
+
+        //Move the text bubble to the NPC
+        enableTextBubble.transform.position = Camera.main.WorldToScreenPoint(NPC.transform.position);
+
+        //enable textBubble
+        enableTextBubble.SetActive(true);
+
+
+        //NPC says what they want
+        textBubble.text = AskForItems;
+
+        //leave text bubble
+        StartCoroutine(speakDelay());
+    }
+
 }
